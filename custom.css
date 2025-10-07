@@ -1,1 +1,29 @@
+/* ===== custom.css - CSS کد شخصی هدر ===== */
+.custom-header-code {
+  margin-bottom: 12px;
+  padding: 12px;
+  background: rgba(110, 231, 183, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+#custom-box p {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  color: #6ee7b7;
+}
+
+#custom-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #6ee7b7;
+  color: #042027;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#custom-btn:hover {
+  background: #34d399;
+}
 
