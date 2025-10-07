@@ -1,1 +1,70 @@
+/* ===== style.css - نسخه توسعه یافته برای سایت شخصی ===== */
+
+/* =============== متغیرها =============== */
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --muted: #9aa4b2;
+  --accent: #6ee7b7;
+  --glass: rgba(255, 255, 255, 0.03);
+  --shadow: rgba(0,0,0,0.6);
+}
+
+/* =============== عمومی =============== */
+body {
+  margin: 0;
+  font-family: 'Vazirmatn', sans-serif;
+  background: var(--bg);
+  color: #e6eef6;
+  line-height: 1.6;
+}
+.container { max-width: 1000px; margin: 24px auto; padding: 20px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* =============== هدر =============== */
+.header { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.avatar { width: 64px; height: 64px; border-radius: 12px; background: linear-gradient(135deg, var(--accent), #60a5fa); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #042027; }
+.name { font-weight: 700; }
+.role { font-size: 13px; color: var(--muted); }
+.nav a { margin-inline: 8px; color: var(--muted); }
+.nav a:hover { color: var(--accent); }
+
+/* =============== Hero =============== */
+.hero { display: grid; grid-template-columns: 1fr; gap: 18px; padding: 22px; border-radius: 16px; background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); box-shadow: 0 6px 18px var(--shadow); }
+.hero-content { display: flex; flex-direction: column; gap: 12px; }
+.hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+.btn { display: inline-block; padding: 8px 14px; border-radius: 10px; font-weight: 600; }
+.btn-primary { background: var(--accent); color: #042027; }
+.btn-secondary { background: transparent; border: 1px solid rgba(255,255,255,0.06); color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.tag { padding: 6px 10px; border-radius: 999px; background: var(--glass); color: var(--muted); font-size: 13px; }
+
+/* =============== کارت‌ها =============== */
+.card { background: var(--card); padding: 16px; border-radius: 12px; box-shadow: 0 4px 12px var(--shadow); }
+.sidebar-card { min-width: 220px; }
+.projects-list { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.project-links { display: flex; gap: 8px; margin-top: 10px; }
+.about ul { margin: 0; padding-inline: 18px; color: var(--muted); }
+.about li { margin-bottom: 4px; }
+
+/* =============== فرم =============== */
+form { display: flex; flex-direction: column; gap: 10px; }
+form input, form textarea { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); background: transparent; color: inherit; }
+form button { cursor: pointer; }
+
+/* =============== گرید =============== */
+.grid { display: grid; grid-template-columns: 2fr 1fr; gap: 18px; margin-top: 18px; }
+
+/* =============== فوتر =============== */
+footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 14px; }
+
+/* =============== ریسپانسیو =============== */
+@media(max-width: 880px){
+  .hero { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr; }
+  .projects-list { grid-template-columns: 1fr; }
+}
+
 
