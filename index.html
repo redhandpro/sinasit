@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-  <link rel="stylesheet" href="style.css">
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نام شما — سایت شخصی</title>
@@ -13,7 +11,7 @@
 </head>
 <body>
   <div class="container">
-    <header>
+    <header class="header">
       <div class="brand">
         <div class="avatar">ن</div>
         <div>
@@ -21,7 +19,7 @@
           <div class="role">توسعه‌دهنده / طراح / نامِ نقش</div>
         </div>
       </div>
-      <nav>
+      <nav class="nav">
         <a href="#about">درباره</a>
         <a href="#projects">پروژه‌ها</a>
         <a href="#contact">تماس</a>
@@ -30,13 +28,13 @@
 
     <main>
       <section class="hero">
-        <div>
+        <div class="hero-content">
           <h1>سلام — من نام شما هستم.</h1>
           <p>من توسعه‌دهنده وب و طراح رابط کاربری هستم. این صفحه نمونه‌ای از سایت شخصی من است. می‌توانید این متن را ویرایش کنید تا توضیحات کوتاه درباره مهارت‌ها، علایق و کاری که انجام می‌دهید اضافه شود.</p>
 
           <div class="hero-buttons">
-            <a class="btn" href="#projects">مشاهده پروژه‌ها</a>
-            <a class="btn secondary" href="#contact">با من تماس بگیرید</a>
+            <a class="btn btn-primary" href="#projects">مشاهده پروژه‌ها</a>
+            <a class="btn btn-secondary" href="#contact">با من تماس بگیرید</a>
           </div>
 
           <div class="tags">
@@ -51,7 +49,7 @@
           <h3>در یک نگاه</h3>
           <p>📍 تهران · 🇮🇷</p>
           <p>ایمیل: <a href="mailto:you@example.com">you@example.com</a></p>
-          <a href="#contact" class="btn">رزومه</a>
+          <a href="#contact" class="btn btn-primary">رزومه</a>
         </aside>
       </section>
 
@@ -79,7 +77,7 @@
           </div>
         </section>
 
-        <aside class="card" id="about">
+        <aside class="card about" id="about">
           <h2>درباره من</h2>
           <p>خلاصه‌ای کوتاه (۲-۳ جمله) درباره سابقهٔ کاری، مهارت‌ها، یا آنچه که به دنبال آن هستید بنویسید.</p>
           <h3>مهارت‌ها</h3>
@@ -88,11 +86,11 @@
             <li>React, Next.js یا فریم‌ورک‌های مشابه</li>
             <li>طراحی رابط کاربری و تجربه کاربری</li>
           </ul>
-          <a class="btn" href="#contact">دعوت به همکاری</a>
+          <a class="btn btn-primary" href="#contact">دعوت به همکاری</a>
         </aside>
       </div>
 
-      <section class="card" id="contact">
+      <section class="card contact" id="contact">
         <h2>تماس</h2>
         <p>می‌توانید از راه‌های پایین با من تماس بگیرید یا فرم را پر کنید.</p>
         <form action="https://formspree.io/f/yourformid" method="POST">
@@ -105,7 +103,7 @@
           <label>پیام</label>
           <textarea name="message" rows="5" placeholder="پیام شما..." required></textarea>
 
-          <button type="submit" class="btn">ارسال پیام</button>
+          <button type="submit" class="btn btn-primary">ارسال پیام</button>
         </form>
         <p>یا مستقیماً ایمیل بفرستید به <a href="mailto:you@example.com">you@example.com</a></p>
       </section>
@@ -121,4 +119,3 @@
   </script>
 </body>
 </html>
-
