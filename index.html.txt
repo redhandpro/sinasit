@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>نام شما — سایت شخصی</title>
+  <meta name="description" content="صفحه شخصی نام شما — درباره، پروژه‌ها و تماس" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">ن</div>
+        <div>
+          <div class="name">نام شما</div>
+          <div class="role">توسعه‌دهنده / طراح / نامِ نقش</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">درباره</a>
+        <a href="#projects">پروژه‌ها</a>
+        <a href="#contact">تماس</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>سلام — من نام شما هستم.</h1>
+          <p>من توسعه‌دهنده وب و طراح رابط کاربری هستم. این صفحه نمونه‌ای از سایت شخصی من است. می‌توانید این متن را ویرایش کنید تا توضیحات کوتاه درباره مهارت‌ها، علایق و کاری که انجام می‌دهید اضافه شود.</p>
+
+          <div class="hero-buttons">
+            <a class="btn" href="#projects">مشاهده پروژه‌ها</a>
+            <a class="btn secondary" href="#contact">با من تماس بگیرید</a>
+          </div>
+
+          <div class="tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+            <span class="tag">UI/UX</span>
+            <span class="tag">Node.js</span>
+          </div>
+        </div>
+
+        <aside class="card sidebar-card">
+          <h3>در یک نگاه</h3>
+          <p>📍 تهران · 🇮🇷</p>
+          <p>ایمیل: <a href="mailto:you@example.com">you@example.com</a></p>
+          <a href="#contact" class="btn">رزومه</a>
+        </aside>
+      </section>
+
+      <div class="grid">
+        <section id="projects" class="card projects">
+          <h2>پروژه‌ها</h2>
+          <div class="projects-list">
+            <article class="card project-card">
+              <h3>پروژه نمونه ۱</h3>
+              <p>توضیح کوتاه درباره پروژه—فناوری‌ها، نقش شما، لینک به گیت‌هاب یا دمو.</p>
+              <div class="project-links">
+                <a href="#" class="tag">گیت‌هاب</a>
+                <a href="#" class="tag">دمو</a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <h3>پروژه نمونه ۲</h3>
+              <p>توضیح کوتاه درباره پروژه دوم.</p>
+              <div class="project-links">
+                <a href="#" class="tag">گیت‌هاب</a>
+                <a href="#" class="tag">مقاله</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <aside class="card" id="about">
+          <h2>درباره من</h2>
+          <p>خلاصه‌ای کوتاه (۲-۳ جمله) درباره سابقهٔ کاری، مهارت‌ها، یا آنچه که به دنبال آن هستید بنویسید.</p>
+          <h3>مهارت‌ها</h3>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Next.js یا فریم‌ورک‌های مشابه</li>
+            <li>طراحی رابط کاربری و تجربه کاربری</li>
+          </ul>
+          <a class="btn" href="#contact">دعوت به همکاری</a>
+        </aside>
+      </div>
+
+      <section class="card" id="contact">
+        <h2>تماس</h2>
+        <p>می‌توانید از راه‌های پایین با من تماس بگیرید یا فرم را پر کنید.</p>
+        <form action="https://formspree.io/f/yourformid" method="POST">
+          <label>نام</label>
+          <input type="text" name="name" placeholder="نام شما" required>
+
+          <label>ایمیل</label>
+          <input type="email" name="email" placeholder="you@example.com" required>
+
+          <label>پیام</label>
+          <textarea name="message" rows="5" placeholder="پیام شما..." required></textarea>
+
+          <button type="submit" class="btn">ارسال پیام</button>
+        </form>
+        <p>یا مستقیماً ایمیل بفرستید به <a href="mailto:you@example.com">you@example.com</a></p>
+      </section>
+
+      <footer>
+        © <span id="year"></span> نام شما · طراحی شده با ♥
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
