@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sina Aghajary</title>
+  <title>Sina Aghajart</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body, html, #app {
       margin: 0;
       width: 100%;
@@ -16,46 +19,33 @@
     body {
       touch-action: none;
       background: #000;
+      font-family: "Montserrat", sans-serif;
     }
 
     #app {
-      height: 100%;
-      font-family: "Montserrat", sans-serif;
       position: relative;
-    }
-
-    a {
-      text-decoration: none;
-      color: #fff;
-      background: rgba(255,255,255,0.1);
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    a:hover {
-      background: rgba(255,255,255,0.3);
+      height: 100%;
     }
 
     .hero {
       position: relative;
+      z-index: 10;
       height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      z-index: 10;
+      gap: 25px;
+      text-align: center;
     }
 
     h1, h2 {
       margin: 0;
       padding: 0;
       color: white;
-      text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+      text-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
       text-transform: uppercase;
       user-select: none;
-      line-height: 100%;
     }
 
     h1 {
@@ -64,8 +54,51 @@
     }
 
     h2 {
-      font-size: 60px;
+      font-size: 50px;
       font-weight: 500;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      text-decoration: none;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      z-index: 10;
+      letter-spacing: 0.5px;
+    }
+
+    footer a {
+      color: #60a5fa;
+      text-decoration: none;
+      font-weight: 600;
     }
 
     #canvas {
@@ -77,17 +110,41 @@
       overflow: hidden;
       z-index: 1;
     }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 50px;
+      }
+      h2 {
+        font-size: 30px;
+      }
+      .btn {
+        padding: 12px 20px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div id="app">
     <canvas id="canvas"></canvas>
+
     <div class="hero">
       <h1>Sina</h1>
       <h2>Aghajary</h2>
 
+      <div class="buttons">
+ 
+        <a class="btn" href="https//www.linkedin.com/" target="_blank">coming soon</a>
+        <a class="btn" href="https://www.instagram.com/" target="_blank">Instagram</a>
+        <a class="btn" href="https://sina-portfolio.com/" target="_blank">coming soon</a>
+      </div>
     </div>
+
+    <footer>
+      © 2025 <strong>Sina Aghajary</strong> | i  ❤️ you
+      <a href="https://threejs.org/" target="_blank"> </a>
+    </footer>
   </div>
 
   <script type="module">
@@ -103,10 +160,10 @@
       }
     });
 
+    // Click changes colors dynamically
     document.body.addEventListener("click", () => {
       const colors = randomColors(3);
       const lightsColors = randomColors(4);
-      console.log(colors, lightsColors);
       app.tubes.setColors(colors);
       app.tubes.setLightsColors(lightsColors);
     });
